@@ -1,0 +1,270 @@
+:root{
+--BrightBlue: hsl(220, 98%, 61%);
+--CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+/* Light Theme */
+
+--VeryLightGray: hsl(0, 0%, 98%);
+--VeryLightGrayishBlue: hsl(236, 33%, 92%);
+--LightGrayishBlue1: hsl(233, 11%, 84%);
+--DarkGrayishBlue1: hsl(236, 9%, 61%);
+--VeryDarkGrayishBlue1: hsl(235, 19%, 35%);
+
+/* Dark Theme */
+
+--VeryDarkBlue: hsl(235, 21%, 11%);
+--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+--LightGrayishBlue2: hsl(234, 39%, 85%);
+/* hover */
+--LightGrayishBlue3: hsl(236, 33%, 92%);  
+--DarkGrayishBlue2: hsla(233, 11%, 52%, 0.521);
+--VeryDarkGrayishBlue2: hsl(233, 14%, 35%);
+--VeryDarkGrayishBlue3: hsl(237, 14%, 26%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--LightGrayishBlue2);
+    background: var(--VeryDarkBlue);
+    font-size: 1.2rem;
+    min-height: 100vh;
+    margin: 0;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.header{
+    background: url('./images/bg-desktop-dark.jpg');
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease;
+}
+
+.header-container{
+    max-width: 30rem;
+    margin: 0 auto;
+
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+h1{
+    color: var(--VeryLightGray);
+}
+.theme-icon{
+    cursor: pointer;
+}
+
+.theme-btn{
+    background: none;
+    border: none;
+}
+input[type = text]{
+    border: none;
+    background: var(--VeryDarkDesaturatedBlue) ;
+    width: 100%;
+    padding: 12px 56px;
+    font-family: inherit;
+    color: var(--LightGrayishBlue2);
+    font-size: 18px;
+}
+
+input[type = text]:focus{
+    outline: none;
+}
+.input-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* button */
+.btn-container{
+    background: var(--VeryDarkDesaturatedBlue) ;
+    padding: 9.5px 10px;
+    border: none;
+}
+button{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--DarkGrayishBlue2);
+    background: var(--VeryDarkDesaturatedBlue) ;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.input-btn{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+
+.todo-check-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checked{
+    display: flex;
+}
+
+.unchecked{
+    display: none;
+}
+.icon{
+    width: 00%;
+}
+
+
+
+
+.todo-container{
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+}
+ul{
+    list-style: none;
+ }
+ul li{
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0 56px;
+}
+li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /* background-image: url(images/icon-check.svg); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    top:0 ;
+    left: 8px;
+    border: 1px solid var(--VeryDarkGrayishBlue1);
+
+}
+li.completed{
+    text-decoration: line-through;
+    }
+
+    li.completed::before{
+         background-image: url(images/icon-check.svg); 
+         background-color:hsl(280, 87%, 65%) ;
+    }
+
+
+.delete-icon{
+   cursor: pointer;
+}
+
+
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--VeryDarkDesaturatedBlue);
+    padding: 12px 12px;
+    border-bottom: 1px solid var(--DarkGrayishBlue2);
+    font-weight: 400;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+
+
+
+.select-todo-mode{
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    background: var(--VeryDarkDesaturatedBlue);
+    color: var(--DarkGrayishBlue2);
+    
+
+}
+.todo-mode{
+    display: flex;
+    gap: 0.4rem;
+    
+}
+
+.todo-mode p, .clear-completed{
+    cursor: pointer;
+}
+
+
+.selected{
+    color: var(--BrightBlue);
+
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* CHECKBOX */
+
+
+
+
+/* light theme */
+.light-header{
+    background: url("./images/bg-desktop-light.jpg");
+}
+
+.light{
+    background: var(--VeryLightGray);
+    color: var(--VeryDarkGrayishBlue2);
+}
+.round label.light{
+    background: var(--VeryLightGray);
+}
+
+.light-ts{
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.15); 
+
+}
+
+
+
+input[type = text].light{
+    background: var(--VeryLightGray);
+    color: var(--VeryLightGrayishBlue);
+}
+
+.completedTodo{
+    text-decoration: line-through;
+}
